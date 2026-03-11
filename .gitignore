@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Build output
+dist/
+dist-ssr/
+
+# Environment & secrets
+.env
+.env.*
+*.env
+
+# Large data directories — do not committed raw match data
+match_history/
+match_timelines/
+
+# ML training data (large JSONL files)
+data/
+
+# Trained model artifacts (re-trainable from data)
+ml_hub/models/
+
+# Vite cache
+.vite/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Python virtual envs
+venv/
+.venv/
+env/
+
+# Temp scripts
+inspect_timeline.py

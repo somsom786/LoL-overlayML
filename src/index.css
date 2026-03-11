@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --lol-dark: #010A13;
+  --lol-bg: #0A1428;
+  --lol-panel: #1E2328;
+  --lol-border: #1E282D;
+  --gold: #C89B3C;
+  --gold-light: #F0E6D2;
+  --gold-dim: #785A28;
+  --teal: #0AC8B9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+
+  /* LoL-style panel — sharp corners with gold accent border */
+  .lol-panel {
+    background: linear-gradient(135deg, rgba(10, 20, 40, 0.92), rgba(30, 35, 40, 0.92));
+    border: 1px solid #785A28;
+    box-shadow: 0 0 8px rgba(200, 155, 60, 0.15), inset 0 1px 0 rgba(200, 170, 110, 0.06);
+  }
+
+  .lol-panel-dark {
+    background: linear-gradient(180deg, rgba(1, 10, 19, 0.94), rgba(10, 20, 40, 0.94));
+    border: 1px solid #1E282D;
+    box-shadow: inset 0 1px 0 rgba(200, 170, 110, 0.04);
+  }
+
+  /* LoL-style gold top-border accent */
+  .lol-accent-top {
+    position: relative;
+  }
+
+  .lol-accent-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C89B3C, transparent);
+  }
+}
+
+/* Gauge */
+.gauge-track {
+  fill: none;
+  stroke: rgba(200, 155, 60, 0.1);
+  stroke-width: 4;
+  stroke-linecap: round;
+}
+
+.gauge-fill {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1s ease-out, stroke 0.3s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(200, 155, 60, 0.2);
+  border-radius: 2px;
+}
