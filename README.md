@@ -1,8 +1,8 @@
-# LoL-Blitz: ML-Driven Real-Time Intelligence Overlay for League of Legends
+# LoL-overlayML: ML-Driven Real-Time Intelligence Overlay for League of Legends
 
 ## Abstract
 
-LoL-Blitz is an advanced, machine-learning-powered in-game overlay designed for League of Legends. It bridges the gap between raw telemetry data and actionable strategic insights by actively processing the Live Client Data API during gameplay. By continuously analyzing the live game state against a custom-trained machine learning model based on the user's historical matches, the system provides real-time win probabilities, power spike timings, dynamic threat assessments, and comeback heuristics—all presented in a minimally invasive heads-up display.
+LoL-overlayML is an advanced, machine-learning-powered in-game overlay designed for League of Legends. It bridges the gap between raw telemetry data and actionable strategic insights by actively processing the Live Client Data API during gameplay. By continuously analyzing the live game state against a custom-trained machine learning model based on the user's historical matches, the system provides real-time win probabilities, power spike timings, dynamic threat assessments, and comeback heuristics—all presented in a minimally invasive heads-up display.
 
 This project demonstrates an end-to-end data pipeline: from automated historical match scraping and timeline event extraction to model training, active state inference via a local FastAPI server, and real-time visualization through an Electron/React application.
 
@@ -20,7 +20,7 @@ graph TD
         C[Riot Timeline API]
     end
 
-    subgraph LoL-Blitz Pipeline
+    subgraph LoL-overlayML Pipeline
         D[fetch_matches.py]
         E[fetch_timelines.py]
         F[convert_timelines.py]

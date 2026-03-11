@@ -1,7 +1,7 @@
 {
-  "name": "lol-blitz-overlay",
+  "name": "lol-overlayml",
   "version": "1.0.0",
-  "description": "League of Legends Situational Intelligence Overlay — Blitz.gg inspired",
+  "description": "League of Legends ML-powered real-time overlay with personalised win probability, power spike detection and comeback heuristics.",
   "main": "electron/main.js",
   "type": "module",
   "scripts": {
